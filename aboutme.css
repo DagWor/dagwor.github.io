@@ -50,8 +50,10 @@ img {
 .director {
     color: yellow;
     list-style-type: none;
+    font-size: 1em;
 }
 
 li.details {
     list-style-type: none;
+    font-size: 1em;
 }
