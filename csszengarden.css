@@ -1,0 +1,99 @@
+.title1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    word-wrap: initial;
+}
+
+header {
+    width: 100%;
+    background-image: url("background.jpg");
+    max-height: 20em;
+    height: 20em;
+    text-align: center;
+    color: black;
+}
+
+footer {
+    background-image: url("footer.jpg");
+    width: 100%;
+    max-height: 20em;
+    padding: 40px 0;
+    height: 15em;
+    text-align: center;
+    color: black;
+}
+
+h3 {
+    margin-top: 2em;
+    font-family: Courier New, monospace;
+    font-size: 3em;
+}
+
+.finalText {
+    margin-top: 2em;
+    font-family: Courier New, monospace;
+    font-size: 3em;
+}
+
+.css {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.middle {
+    width: 60%;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    padding: 2em;
+}
+
+a {
+    font-family: monospace;
+    text-decoration: none;
+}
+
+span {
+    font-family: Courier New, monospace;
+    text-indent: 1em;
+}
+
+.subtitle {
+    font-family: monospace;
+    text-align: center;
+    font-size: 2em;
+}
+
+.articles{
+    margin-top: 3em;
+}
+
+.validators {
+    margin: 1em;
+    font-size: 2em;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.foot div div ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+ul{
+    list-style-type: none;
+}
+.footer-title{
+    font-weight: bold;
+}
