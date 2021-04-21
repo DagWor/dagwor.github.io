@@ -27,6 +27,10 @@ a {
     color: red;
 }
 
+a:hover {
+    color: blue;
+}
+
 .child {
     margin: 0 auto;
 }
@@ -41,4 +45,13 @@ img {
 
 .image-container {
     margin-bottom: 5em;
+}
+
+.director {
+    color: yellow;
+    list-style-type: none;
+}
+
+li.details {
+    list-style-type: none;
 }
