@@ -1,0 +1,37 @@
+header {
+    background-color: cadetblue;
+    height: 3em;
+    padding-left: 2em;
+    grid-row-start: span;
+}
+
+.container {
+    display: grid;
+}
+
+label {
+}
+
+
+input {
+    display: block;
+    margin-left: 0.5em;
+}
+
+input {
+    margin-left: 0.5em;
+}
+
+textarea {
+    display: block;
+    margin-left: 0.5em;
+}
+
+.form-div {
+    margin-top: 3em;
+    margin-left: 2em;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
