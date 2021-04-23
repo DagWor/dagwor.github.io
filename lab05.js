@@ -4,7 +4,7 @@ function question1(array) {
         if (array[index] > 20)
             sum += array[index];
 
-    console.log(sum);
+    // console.log(sum);
 }
 
 
@@ -14,25 +14,24 @@ function question2(array) {
         if (array[index].length >= 5 && array[index].includes('a'))
             newArr.push(array[index])
 
-    console.log(newArr);
+    // console.log(newArr);
 }
 
-class Person {
-    constructor(firstName, lastName, birthDate) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-    }
+function Person(firstName, lastName, birthDate) {
 
-    getFullName(){
+    this.firstName = firstName
+    this.lastName = lastName
+    this.birthDate = birthDate
+
+    this.getFullName = function(){
         return  this.firstName + ' ' + this.lastName;
     }
 
-    getBirthDate(){
+    this.getBirthDate = function(){
         return this.birthDate
     }
 
-    getAge(){
+    this.getAge = function(){
         let age = this.birthDate.getTime() - Date.now(); 
         let ageDate = new Date(age); // miliseconds from epoch
         return Math.abs(ageDate.getUTCFullYear() - 1970);
@@ -46,12 +45,14 @@ question1(numbers)
 let strings = ['awesome', 'and', 'fantastic', 'life']
 question2(strings)
 
+
 let p = new Person('John', 'Doe', new Date(2018, 1, 14));
 let p1 = new Person('Jane', 'Doe', new Date(2000, 4, 4));
 let p2 = new Person('Susan', 'Rodes', new Date(1997, 5, 20));
 let p3 = new Person('James', 'Stewart', new Date(1978, 11, 21));
 let p4 = new Person('Meryll', 'Streep', new Date(2001, 16, 30));
 
+console.log(p.getFullName());
 let people = [p, p1, p2, p3, p4]
 
 function question3OlderThan20(people){
