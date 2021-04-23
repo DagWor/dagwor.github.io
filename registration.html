@@ -1,76 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-    <link rel="stylesheet" href="registration.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <link href="registration.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h3>Workshop Registration</h3>
-        </header>
-
-        <div>
-            <form class="form-div">
-                <div class="form-div">
-                    <label> Firstname </label> 
-                    <input type="text" name="firstname" size="15" /> <br> <br>
-                    <label> Lastname: </label>
-                    <input type="text" name="lastname" size="15" /> <br> <br>
-                    <label> Company/Institution: </label> <br> <br>
-                    <label> Address: </label> <br> <br>
-                    <label>
-                        City :
-                    </label> <br> <br>
-                    <label>State/Province/Region</label> <br> <br>
-                    <label>Country</label> <br> <br>
-
-                    <label> Email </label> <br> <br>
-                    <label> Phone Number </label> <br> <br>
+    <header>
+        <span class="title"> Workshop Registration</span>
+    </header>
+    <div class="form-container">
+        <form>
+            <div class="user-details">
+                <div class="inputs">
+                    <u>Register now while seats are available</u>
                 </div>
-                <div class="form-div">
-                    <input type="text" name="company" size="15" /> <br> <br>
-                    <textarea name="address" id="" cols="30"
-                        rows="1"></textarea>
-                    <br>
-                    <input type="text" name="city" size="15" /> <br> <br>
-
-                    <select>
-                        <option value="Iowa">Iowa</option>
-                        <option value="California">California</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Ohio">Ohio</option>
-                    </select>
-                    <br>
-                    <br>
-                    <select>
-                        <option value="Iowa">Iowa</option>
-                        <option value="California">California</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Ohio">Ohio</option>
-                    </select>
-
-                    <br>
-                    <br>
-                    <input type="email" name="email" size="15" /> <br> <br>
-
-                    <input type="number" name="phone" size="15" /> <br> <br>
+                <div class="inputs">
+                    <label for="firstname class=" required">First Name</label>
+                    <input id="firstname" type="text" placeholder="First Name"
+                        required>
                 </div>
-                <div>
-
-
-
-            </form>
-        </div>
+                <div class="inputs">
+                    <label for="lastName" class="required">Last Name</label>
+                    <input id="lastName" type="text" required />
+                </div>
+                <div class="inputs">
+                    <label for="company/Institution"
+                        class="required">Company/Institution </label>
+                    <input id="company/Institution" type="text" required />
+                </div>
+                <div class="inputs address">
+                    <label for="address" class="required">Address </label>
+                    <textarea id="address" rows="5"> </textarea>
+                </div>
+                <br/><br/>
+                <div class="inputs">
+                    <label for="city">City</label>
+                    <input id="city" type="text" />
+                </div>
+                <div class="inputs">
+                    <label for="state">State/Province/Region</label>
+                    <select id="state">
+                        <option selected disabled> --Select-- </option>
+                        <option value="iowa"> Iowa </option>
+                        <option value="Carolina"> Carolina </option>
+                        <option value="Florida"> Florida </option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <option selected disabled> --Select-- </option>
+                        <option value="eth"> Ethiopia </option>
+                        <option value="argentina"> Argentina </option>
+                        <option value="usa"> USA </option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <label for="email" class="required"> Email</label>
+                    <input id="email" type="email" required />
+                </div>
+                <div class="inputs">
+                    <label for="phoneNumber" class="required">Phone
+                        Number</label>
+                    <input type="text" id="phoneNumber" required="required" />
+                </div>
+            </div>
+            <div class="additional">
+                <u>Lunch</u>
+                <div class="inputs">
+                    <label for="meal"> Meal preference </label>
+                    <select id="meal" class="styled-select">
+                        <option selected disabled> --Select-- </option>
+                        <option> Vegiterian </option>
+                        <option> Vegan </option>
+                        <option> Everything </option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <u> Payment details</u>
+                </div>
+                <div class="inputs">
+                    <label> Payment Mode </label>
+                    <label class="inline-block payment">
+                        <input type="checkbox" class="checkboxes"/> Demand Draft
+                    </label>
+                    <label class="inline-block payment">
+                        <input type="checkbox"  class="checkboxes"/>Cash
+                    </label>
+                    <label class="inline-block payment">
+                        <input type="checkbox"  class="checkboxes"/> Check
+                    </label>
+                </div>
+                <div class="inputs">
+                    <label for="checkNo"> DD/Check No. </label>
+                    <input id="checkNo" type="text" />
+                </div>
+                <div class="inputs">
+                    <label for="drawnOn"> Drawn on(Bank name) </label>
+                    <input type="text" id="drawnOn" />
+                </div>
+                <div class="inputs">
+                    <label for="payableAt"> Payable at</label>
+                    <input id="payableAt" type="text" />
+                </div>
+                <br /> <br /> <br /> <br /> <br /> <br />
+            </div>
+            <div class="inline-block actions">
+                <input type="submit" value="Submit" class="btn"/>
+                <input type="reset" value="Reset" class="btn" />
+            </div>
+        </form>
     </div>
 </body>
 
