@@ -1,20 +1,18 @@
 function question1(array) {
-    let sum = 0
-    for (let index = 0; index < array.length; index++)
-        if (array[index] > 20)
-            sum += array[index];
-
-    // console.log(sum);
+    let sum = array.filter(a => a > 20).reduce((a, b) => a + b, 0)
+    console.log("The sum of digits greater than 20 : ", sum);
 }
 
 
 function question2(array) {
-    let newArr = []
-    for (let index = 0; index < array.length; index++)
-        if (array[index].length >= 5 && array[index].includes('a'))
-            newArr.push(array[index])
-
-    // console.log(newArr);
+    let newArr = array
+        .filter(a => a.length >= 5 && a.includes('a'))
+        .reduce((newArray, current) =>{
+            [...newArray, current]
+            newArray.push(current)
+            return newArray
+        }, [])
+    console.log("Question 2 : ", newArr);
 }
 
 function Person(firstName, lastName, birthDate) {
@@ -52,28 +50,25 @@ let p2 = new Person('Susan', 'Rodes', new Date(1997, 5, 20));
 let p3 = new Person('James', 'Stewart', new Date(1978, 11, 21));
 let p4 = new Person('Meryll', 'Streep', new Date(2001, 16, 30));
 
-console.log(p.getFullName());
 let people = [p, p1, p2, p3, p4]
 
 function question3OlderThan20(people){
-    let older20 = []
-    people.forEach(element => {
-        if(element.getAge() > 20)
-            older20.push(element)
-    });
-    console.log(older20);
+    let older20 = people.filter(p => p.getAge() > 20).reduce((newArray, current) =>{
+        [...newArray, current]
+        newArray.push(current)
+        return newArray
+    }, [])
+    console.log("People older than 20 : ", older20);
 }
 
 question3OlderThan20(people)
 
 
 function question3BornAfter2000(people){
-    let after2000 = []
-    people.forEach(element => {
-        if(element.getBirthDate().getUTCFullYear() > 2000)
-            after2000.push(element.getFullName())
-    });
-    console.log(after2000);
+    let after2000 = people
+        .filter(p => p.getBirthDate().getUTCFullYear() > 2000)
+        .map(p => p.getFullName())
+    console.log("People born after 2000 : ", after2000);
 }
 
 question3BornAfter2000(people)
