@@ -1,37 +1,101 @@
-header {
-    background-color: cadetblue;
-    height: 3em;
-    padding-left: 2em;
-    grid-row-start: span;
+body{
+margin: 0px;
+padding: 0px;
 }
 
-.container {
-    display: grid;
+form > label{
+    margin: 10px;
+}
+
+.required::after{
+    display: inline;
+}
+label{
+    display: inline-block;
+}
+
+.inputs{
+    margin: 40px;
+}
+
+.inputs > input, select,textarea, .checkboxes{
+    margin-left: 140px;
+    width: 200px;
+    float: right;
+}
+
+.checkboxes {
+    float: left;
+    margin-right: -6em;
+}
+
+.payment{
+    margin-left: 60px;
+    font-weight: lighter;
+}
+
+.additional {
+    display: inline-block;
+ }
+
+.user-details{
+    display: inline-block;
+}
+
+form > div{
+    display: inline-block;
+}
+
+.inline-block{
+    display: block;
+}
+.display-block {
+    display: block;
 }
 
 label {
+    font-weight: bold;
 }
 
-
-input {
-    display: block;
-    margin-left: 0.5em;
+header {
+    padding: 1.5em;
+    margin-bottom: 0.5em;
+    background-color: rgb(146, 178, 116);
 }
 
-input {
-    margin-left: 0.5em;
+.title{
+    font-size: 20px;
+    font-weight: 900;
 }
 
-textarea {
-    display: block;
-    margin-left: 0.5em;
+.actions {
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    padding: 20px;
 }
 
-.form-div {
-    margin-top: 3em;
-    margin-left: 2em;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.btn {
+    padding: 8px 15px;
+    background-color: rgb(146, 178, 116);
+    color: white;
+    border: none;
+}
+
+header>select {
+    background-color: rgb(136, 168, 136);
+    border: none;
+    width: 100px;
+}
+
+.address{
+    margin-bottom: 10px !important;
+}
+
+.form-container {
+    margin-left: 15%
 }
 
