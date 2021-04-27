@@ -25,8 +25,15 @@ let fail = user.loginFail.bind(user)
 let ok = user.loginOk.bind(user)
 askPassword(ok, fail)
 
-// call
+// call - used in askPassword function
 askPassword(user.loginOk, user.loginFail)
+
+// apply - commented out since similar to call
+/*function askPassword(ok, fail) {
+    let password = prompt("Password?", '')
+    if(password == 'rockstar') ok.apply(user)
+    else fail.apply(user);
+}*/
 
 
 
