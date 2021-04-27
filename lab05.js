@@ -1,5 +1,5 @@
 function question1(array) {
-    let sum = array.filter(a => a > 20).reduce((a, b) => a + b, 0)
+    let sum = array.filter(function(a){ return a > 20}).reduce((a, b) => a + b, 0)
     console.log("The sum of digits greater than 20 : ", sum);
 }
 
