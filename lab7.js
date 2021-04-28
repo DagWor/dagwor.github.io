@@ -2,7 +2,7 @@
 // QUESTION 1
 function askPassword(ok, fail) {
     let password = prompt("Password?", '')
-    if(password == 'rockstar') ok.call(user)
+    if (password == 'rockstar') ok.call(user)
     else fail.call(user);
 }
 
@@ -12,7 +12,7 @@ let user = {
         console.log(`${this.name} logged in`)
     },
 
-    loginFail: function() {
+    loginFail: function () {
         console.log(`${this.name} failed to log in`)
     }
 }
@@ -20,20 +20,14 @@ let user = {
 // arrow function
 askPassword(() => user.loginOk(), () => user.loginFail())
 
-// bind
-let fail = user.loginFail.bind(user)
-let ok = user.loginOk.bind(user)
-askPassword(ok, fail)
+// using bind
+askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 
-// call - used in askPassword function
-askPassword(user.loginOk, user.loginFail)
+// using call
+askPassword(() => user.loginOk.call(user), () => user.loginFail.call(user));
 
-// apply - commented out since similar to call
-/*function askPassword(ok, fail) {
-    let password = prompt("Password?", '')
-    if(password == 'rockstar') ok.apply(user)
-    else fail.apply(user);
-}*/
+// using apply
+askPassword(() => user.loginOk.apply(user), () => user.loginFail.apply(user));
 
 
 
@@ -44,8 +38,8 @@ let group = {
     title: "Our Group",
     students: ["John", "Pete", "Alice"],
 
-    showList: function() {
-        this.students.forEach(function(student) {
+    showList: function () {
+        this.students.forEach(function (student) {
             console.log(this.title + ": " + student);
         }.bind(this));
     }
