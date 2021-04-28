@@ -23,6 +23,9 @@ askPassword(() => user.loginOk(), () => user.loginFail())
 // using bind
 askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 
+// bind using arrow function
+askPassword(() => user.loginOk.bind(user)(),() =>  user.loginFail.bind(user)());
+
 // using call
 askPassword(() => user.loginOk.call(user), () => user.loginFail.call(user));
 
