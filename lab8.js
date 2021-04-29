@@ -40,6 +40,9 @@ function computeAllAverageGrade1(students) {
 
 console.log(computeAllAverageGrade1(list1));
 
+
+
+
 // QUESTION 2
 function Student(fname, lname, grades){
     this.firstName = fname,
@@ -49,7 +52,7 @@ function Student(fname, lname, grades){
     
 let student1 = new Student("dan", "miller", [20, 50, 60])
 let student2 = new Student("jane", "kits", [40, 50, 60])
-let student3 = new Student("soph", "smites", [26, 50, 60])
+let student3 = new Student("soph", "smites", [26, 40, 60])
 let student4 = new Student("hugh", "lavender", [78, 50, 60])
 
 let list = [student1, student2, student3, student4]
@@ -88,15 +91,11 @@ SingleLinkedList.prototype.add = function(x) {
     let node = new Node(x);
     let current;
  
-    if (this.head == null)
-        this.head = node;
+    if (this.head == null) this.head = node;
     else {
         current = this.head;
  
-        while (current.next) {
-            current = current.next;
-        }
- 
+        while (current.next) current = current.next;
         current.next = node;
     }
     this.size++;
@@ -108,11 +107,9 @@ SingleLinkedList.prototype.remove = function(x) {
  
     while (current != null) {
         if (current.element === x) {
-            if (prev == null) {
-                this.head = current.next;
-            } else {
-                prev.next = current.next;
-            }
+            if (prev == null) this.head = current.next;
+            else prev.next = current.next;
+        
             this.size--;
             return current.element;
         }
