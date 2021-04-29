@@ -61,7 +61,7 @@ Student.prototype.computeAverageGrade = function () {
     return this.grades.reduce((a, b) => a + b, 0) / this.grades.length;
 }
 
-Student.prototype.inputNewGrade = function () {
+Student.prototype.inputNewGrade = function (grade) {
     return this.grades.push(grade)
 }
 
@@ -101,13 +101,13 @@ console.log("Question 3 : " + o.sort());
 
 // QUESTION 4
 function SingleLinkedList() {
-    this.head = null,
-        this.size = 0
+    this.head = null
+    this.size = 0
 }
 
 function Node(x) {
-    this.element = x,
-        this.next = null
+    this.element = x
+    this.next = null
 }
 
 SingleLinkedList.prototype.add = function (x) {
