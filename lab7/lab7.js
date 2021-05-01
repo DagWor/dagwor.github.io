@@ -1,8 +1,8 @@
 
 // QUESTION 1
 function askPassword(ok, fail) {
-    let password = prompt("Password?", '')
-    if (password == 'rockstar') ok.call(user)
+    // let password = prompt("Password?", '')
+    if ('rockstar' == 'rockstar') ok.call(user)
     else fail.call(user);
 }
 
@@ -33,6 +33,10 @@ askPassword(() => user.loginOk.call(user), () => user.loginFail.call(user));
 askPassword(() => user.loginOk.apply(user), () => user.loginFail.apply(user));
 
 
+// using wrapper
+askPassword(function(){user.loginOk()}, function(){user.loginFail()})
+
+
 
 
 
@@ -44,8 +48,15 @@ let group = {
     showList: function () {
         this.students.forEach(function (student) {
             console.log(this.title + ": " + student);
-        }.bind(this));
+        });
     }
 };
+
+// usig bing
 group.showList();
+
+console.log();
+
+// using apply
+group.showList.call(group)
 

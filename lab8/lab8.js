@@ -44,13 +44,13 @@ console.log("Question 1 : " + computeAllAverageGrade1(list1));
 
 
 // QUESTION 2
-function Student(fname, lname, grades) {
+function Student(fname, lname, grades = [0]) {
     this.firstName = fname;
     this.lastName = lname;
     this.grades = grades;
 }
 
-let student1 = new Student("dan", "miller", [20, 50, 60])
+let student1 = new Student("dan", "miller")
 let student2 = new Student("jane", "kits", [40, 50, 60])
 let student3 = new Student("soph", "smites", [26, 40, 60])
 let student4 = new Student("hugh", "lavender", [78, 50, 60])

@@ -7,11 +7,11 @@ function question1(array) {
 function question2(array) {
     let newArr = array
         .filter(a => a.length >= 5 && a.includes('a'))
-        .reduce((newArray, current) =>{
-            [...newArray, current]
-            newArray.push(current)
-            return newArray
-        }, [])
+        // .reduce((newArray, current) =>{
+        //     [...newArray, current]
+        //     newArray.push(current)
+        //     return newArray
+        // }, [])
     console.log("Question 2 : ", newArr);
 }
 
@@ -53,11 +53,7 @@ let p4 = new Person('Meryll', 'Streep', new Date(2001, 16, 30));
 let people = [p, p1, p2, p3, p4]
 
 function question3OlderThan20(people){
-    let older20 = people.filter(p => p.getAge() > 20).reduce((newArray, current) =>{
-        [...newArray, current]
-        newArray.push(current)
-        return newArray
-    }, [])
+    let older20 = people.filter(p => p.getAge() > 20)
     console.log("People older than 20 : ", older20);
 }
 
