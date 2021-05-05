@@ -6,7 +6,6 @@
         document.getElementById("stop").onclick = stopAnimation;
         document.getElementById("size_select").onchange = changeSize;
         document.getElementById("turbo").onclick = changeTurbo;
-        console.log("hey");
     }
     var counter = 0;
     var timerInterval;
@@ -36,7 +35,6 @@
     function changeSize() {
         var size = document.getElementById("size_select");
         var size_option = size.options[size.selectedIndex].value;
-        console.log(size_option);
         if(size_option == "Tiny") document.getElementById("text-area").style.fontSize = "5pt";
         if(size_option == "Small") document.getElementById("text-area").style.fontSize = "10pt";
         if(size_option == "Medium") document.getElementById("text-area").style.fontSize = "15pt";
