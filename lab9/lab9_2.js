@@ -33,9 +33,7 @@ class Question {
     }
 
     checkAnswer(ans) {
-        if (this.answer === ans) {
-            return 1
-        }
+        if (this.answer === ans) return 1
         else return 0
     }
 
@@ -100,6 +98,8 @@ student1.addAnswer(new Question(2, 'a'));
 student1.addAnswer(new Question(3, 'b'));
 student1.addAnswer(new Question(1, 'b'));
 let student2 = new Student(11);
+
+
 student2.addAnswer(new Question(3, 'b'));
 student2.addAnswer(new Question(2, 'a'));
 student2.addAnswer(new Question(1, 'd'));
