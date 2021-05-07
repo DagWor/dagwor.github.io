@@ -16,10 +16,10 @@ public class Calculator extends HttpServlet {
     double mulSecond = 0.0;
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-            addFirst = Double.parseDouble(req.getParameter("addFirst"));
-            addSecond = Double.parseDouble(req.getParameter("addSecond"));
-            mulFirst = Double.parseDouble(req.getParameter("mulFirst"));
-            mulSecond = Double.parseDouble(req.getParameter("mulSecond"));
+            addFirst = !req.getParameter("addFirst").equals("") ? Double.parseDouble(req.getParameter("addFirst")) : 0;
+            addSecond = !req.getParameter("addSecond").equals("") ? Double.parseDouble(req.getParameter("addSecond")) : 0;
+            mulFirst = !req.getParameter("mulFirst").equals("") ? Double.parseDouble(req.getParameter("mulFirst")) : 1;
+            mulSecond = !req.getParameter("mulSecond").equals("") ? Double.parseDouble(req.getParameter("mulSecond")) : 1;
 
             double addRes = addFirst + addSecond;
             req.setAttribute(String.valueOf(addRes), "addRes");
