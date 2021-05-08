@@ -3,7 +3,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
 
 @WebServlet("/quiz")
 public class QuizServlet extends HttpServlet {
