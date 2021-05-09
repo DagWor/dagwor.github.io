@@ -24,41 +24,10 @@ public class QuizServlet extends HttpServlet {
           question += 1;
           session.setAttribute("counter", question);
           session.setAttribute("quiz", quiz);
-          PrintWriter out = response.getWriter();
 
-          if(quiz.getQuestions().length == question){
-              out.println("<!DOCTYPE html>\n" +
-                      "<html lang=\"en\">\n" +
-                      "<head>\n" +
-                      "    <meta charset=\"UTF-8\">\n" +
-                      "    <title>Quiz</title>\n" +
-                      "</head>\n" +
-                      "<body>\n" +
-                      "<h1>The Number Quiz Results</h1>\n" +
-                      "Your score is " + quiz.getCount() + "/" + quiz.getQuestions().length +
-                      "\n" +
-                      "</body>\n" +
-                      "</html>");
+          if(quiz.getQuestions().length == question) response.sendRedirect("final.jsp");
+          else response.sendRedirect("quiz.jsp");
 
-          } else {
-              out.println("<!DOCTYPE html>\n" +
-                      "<html lang=\"en\">\n" +
-                      "<head>\n" +
-                      "    <meta charset=\"UTF-8\">\n" +
-                      "    <title>Quiz</title>\n" +
-                      "</head>\n" +
-                      "<body>\n" +
-                      "<h1>The Number Quiz</h1>\n" +
-                      "<p>" + quiz.getQuestions()[question] + "\n" +
-                      "Your score is :" + quiz.getCount() + "\n" +
-                      "<form action=\"quiz\" method=\"post\">\n" +
-                      "    <input required type=\"number\" name=\"answer\">\n" +
-                      "    <input type=\"submit\" value=\"Check\">\n" +
-                      "</form>\n" +
-                      "\n" +
-                      "</body>\n" +
-                      "</html>");
-          }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -72,40 +41,7 @@ public class QuizServlet extends HttpServlet {
             question = (int)session.getAttribute("counter");
         }
 
-        PrintWriter out = response.getWriter();
-
-        if(quiz.getQuestions().length == question){
-            out.println("<!DOCTYPE html>\n" +
-                    "<html lang=\"en\">\n" +
-                    "<head>\n" +
-                    "    <meta charset=\"UTF-8\">\n" +
-                    "    <title>Quiz</title>\n" +
-                    "</head>\n" +
-                    "<body>\n" +
-                    "<h1>The Number Quiz Results</h1>\n" +
-                    "Your score is " + quiz.getCount() + "/" + quiz.getQuestions().length +
-                    "\n" +
-                    "</body>\n" +
-                    "</html>");
-
-        } else {
-            out.println("<!DOCTYPE html>\n" +
-                    "<html lang=\"en\">\n" +
-                    "<head>\n" +
-                    "    <meta charset=\"UTF-8\">\n" +
-                    "    <title>Quiz</title>\n" +
-                    "</head>\n" +
-                    "<body>\n" +
-                    "<h1>The Number Quiz</h1>\n" +
-                    "<p>" + quiz.getQuestions()[question] + "\n" +
-                    "Your score is :" + quiz.getCount() + "\n" +
-                    "<form action=\"quiz\" method=\"post\">\n" +
-                    "    <input required type=\"number\" name=\"answer\">\n" +
-                    "    <input type=\"submit\" value=\"Check\">\n" +
-                    "</form>\n" +
-                    "\n" +
-                    "</body>\n" +
-                    "</html>");
-        }
+        if(quiz.getQuestions().length == question) response.sendRedirect("final.jsp");
+        else response.sendRedirect("quiz.jsp");
     }
 }

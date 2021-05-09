@@ -11,10 +11,17 @@
     <title>Quiz</title>
 </head>
 <body>
-
-<form action="quiz" method="post">
-    <input>
+<h1> Number Quiz</h1>
+<p>Your score is ${quiz.getCount()}</p>
+<br/>
+<p>
+    Guess the number in the sequence
+    ${quiz.getQuestions()[counter]}
+</p>
+<br>
+<form method="post" action="quiz">
+    <input type="number" name="answer" required/>
+    <input type="submit" value="Submit"/>
 </form>
-
 </body>
-</html>
+</html

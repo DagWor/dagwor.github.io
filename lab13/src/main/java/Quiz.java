@@ -36,4 +36,8 @@ public class Quiz {
         return answers;
     }
 
+    public int getQuizLength(){
+        return questions.length;
+    }
+
 }
