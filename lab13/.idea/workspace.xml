@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b19ac79d-7c5d-4ee9-bd23-336cf6cb6983" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/final.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QuizServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/quiz.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/quiz.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="b19ac79d-7c5d-4ee9-bd23-336cf6cb6983" name="Default Changelist" comment="lab 13 complete, quiz using jsp" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,8 +164,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620424295733</updated>
-      <workItem from="1620424300215" duration="2773000" />
+      <workItem from="1620424300215" duration="3650000" />
     </task>
+    <task id="LOCAL-00001" summary="lab 13 complete, quiz using jsp">
+      <created>1620520006076</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620520006076</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,5 +189,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab 13 complete, quiz using jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 13 complete, quiz using jsp" />
   </component>
 </project>
